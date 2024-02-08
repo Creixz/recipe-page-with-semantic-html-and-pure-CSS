@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+  font-family: "Young Serif", serif;
+}
+
+.card {
+  max-width: 46rem;
+  margin: 123px auto 123px auto;
+  padding: 2.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1.5rem;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.card__title {
+  margin-bottom: 2rem;
+}
+
+.card__title h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.card__title p {
+  line-height: 1.5;
+  font-family: "Outfit", sans-serif;
+}
+
+.card__preparation {
+  padding: 1.75rem;
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 2rem;
+  border-radius: 0.75rem;
+  background-color: hsl(330, 100%, 98%);
+}
+
+.card__preparation h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+
+.card__preparation-list {
+  list-style: none;
+  color: hsl(30, 10%, 34%);
+}
+
+.card__preparation-list li {
+  display: flex;
+  align-items: center;
+}
+
+.card__preparation-list li::before {
+  content: "\2022";
+  color: hsl(332, 51%, 32%);
+  font-size: 1.5rem;
+  width: 1rem;
+  margin-inline: 0.5rem 1rem;
+}
+
+.card__preparation-list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.card__ingredients {
+  margin-bottom: 2rem;
+}
+
+.card__ingredients h2 {
+  font-size: 1.75rem;
+  color: #854632;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.card__ingredients-list {
+  list-style: none;
+  color: hsl(30, 10%, 34%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card__ingredients-list li {
+  display: flex;
+  align-items: center;
+}
+
+.card__ingredients-list li::before {
+  content: "\2022";
+  margin-inline: 0.5rem 1rem;
+  color: #854632;
+  font-size: 1.5rem;
+  width: 1rem;
+}
+
+.card__ingredients-list li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.card__divider {
+  border: none;
+  background-color: hsl(30, 54%, 90%);
+  height: 1px;
+  margin-bottom: 2rem;
+}
+
+.card__instructions {
+  margin-bottom: 2rem;
+}
+
+.card__instructions h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: #854632;
+  font-weight: 400;
+}
+
+.card__instructions-list {
+  list-style: none;
+  counter-reset: lista;
+  font-family: "Outfit", sans-serif;
+}
+
+.card__instructions-list li {
+  counter-increment: lista;
+  color: #5f564d;
+  display: flex;
+  line-height: 1.5;
+}
+
+.card__instructions-list li:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.card__instructions-list li::before {
+  content: counter(lista) ".";
+  color: hsl(332, 51%, 32%);
+  font-weight: 600;
+  margin-inline: 0.5rem 1rem;
+  padding-right: 6px;
+}
+
+.card__nutrition {
+}
+
+.card__nutrition-title {
+  color: #854632;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__nutrition-description {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.card__nutrition-table {
+  font-family: "Outfit", sans-serif;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.table__row {
+  display: flex;
+  width: 100%;
+}
+
+.table__row:not(:last-child) {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid hsl(30, 54%, 90%);
+}
+
+td {
+  flex: 1;
+}
+
+.table__item {
+  margin-left: 2rem;
+}
+
+.table__value {
+  color: #854632;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 46rem) {
+  .card {
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+@media only screen and (max-width: 23.4375rem) {
+  .card {
+    padding: 0 2rem 2.5rem 2rem;
+  }
+
+  .card__title h1 {
+    font-size: 2.25rem;
+  }
+
+  .card__image {
+    width: 100%;
+    border-radius: 0;
+    width: calc(100% + 2rem * 2);
+    margin-left: -2rem;
+  }
+}
