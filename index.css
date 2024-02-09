@@ -39,6 +39,7 @@ body {
 .card__title p {
   line-height: 1.5;
   font-family: "Outfit", sans-serif;
+  color: #5F564D;
 }
 
 .card__preparation {
@@ -49,7 +50,7 @@ body {
   background-color: hsl(330, 100%, 98%);
 }
 
-.card__preparation h3 {
+.card__preparation h2 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 600;
